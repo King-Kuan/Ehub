@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel - eHub</title>
+  <script type="module" src="channel.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a192f;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #64ffda;
+    }
+
+    form {
+      background: #112240;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 4px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: #64ffda;
+      color: #0a192f;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #52e0c4;
+    }
+
+    .entry {
+      background: #233554;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .entry p {
+      margin: 5px 0;
+    }
+
+    .entry button {
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Add YouTube Channel</h2>
+  <form id="channelForm">
+    <label>Channel Title</label>
+    <input type="text" id="channelTitle" required />
+    <label>Channel Link</label>
+    <input type="url" id="channelLink" required />
+    <label>Reward (Rwf)</label>
+    <input type="number" id="channelReward" required />
+    <button type="submit">Add Channel</button>
+  </form>
+
+  <h3>Posted Channels</h3>
+  <div id="channelList"></div>
+
+  <h2>Add Quiz Question</h2>
+  <form id="questionForm">
+    <label>Question</label>
+    <textarea id="questionText" required></textarea>
+    <label>Option A</label>
+    <input type="text" id="optA" required />
+    <label>Option B</label>
+    <input type="text" id="optB" required />
+    <label>Option C</label>
+    <input type="text" id="optC" required />
+    <label>Option D</label>
+    <input type="text" id="optD" required />
+    <label>Correct Answer (A, B, C, D)</label>
+    <select id="correctAnswer" required>
+      <option value="">Select</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+    <label>Time Limit (seconds)</label>
+    <input type="number" id="timeLimit" required />
+    <button type="submit">Add Question</button>
+  </form>
+
+  <h3>Posted Questions</h3>
+  <div id="questionList"></div>
+</body>
+</html>

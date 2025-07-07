@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #2c3e50;
+  color: white;
+}
+
+.header button {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 45%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.card p {
+  font-size: 1.3em;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.referral {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.referral input {
+  width: 80%;
+  max-width: 600px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+.referral button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2980b9;
+  color: white;
+  font-size: 24px;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.floating-menu {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.floating-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.floating-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.floating-menu li:last-child {
+  border-bottom: none;
+}
+
+.floating-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.floating-menu a:hover {
+  background: #f0f0f0;
+}

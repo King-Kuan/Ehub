@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Withdraw - eHub</title>
+  <link rel="stylesheet" href="withdraw.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>Withdraw Earnings</h2>
+
+    <p>Your Balance: <span id="balance">Loading...</span> RWF</p>
+
+    <form id="withdrawForm">
+      <input type="text" id="receiverName" placeholder="Receiver's Name" required />
+      <input type="text" id="receiverNumber" placeholder="MOMO Number" required />
+      <input type="number" id="amount" placeholder="Amount (min 2500 RWF)" required />
+      <button type="submit">Withdraw</button>
+    </form>
+
+    <div class="info-box">
+      <p><strong>Important:</strong> 20% of the amount you withdraw will be deducted and used to support the development and maintenance of our system. Thank you for your understanding.</p>
+      <p><strong>Working Hours:</strong> We process withdrawal requests between <strong>8:40 AM and 6:00 PM</strong>.</p>
+      <p>Withdrawals are typically processed within <strong>1 to 4 hours</strong> after submission.</p>
+    </div>
+
+    <h3>Withdrawal History</h3>
+    <ul id="historyList"></ul>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 eHub. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="withdraw.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="header">
+    <h2>Welcome to Your Dashboard</h2>
+    <button id="logoutBtn">Sign Out</button>
+  </div>
+
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h3>Earned Money</h3>
+        <p id="earned">Rwf 0</p>
+      </div>
+      <div class="card">
+        <h3>Withdrawn Money</h3>
+        <p id="withdrawn">Rwf 0</p>
+      </div>
+      <div class="card">
+        <h3>Total Earned</h3>
+        <p id="totalEarned">Rwf 0</p>
+      </div>
+      <div class="card">
+        <h3>Total Withdrawn</h3>
+        <p id="totalWithdrawn">Rwf 0</p>
+      </div>
+    </div>
+
+    <div class="referral">
+      <h3>Your Referral Link</h3>
+      <input type="text" id="referralLink" readonly />
+      <button onclick="copyReferral()">Copy Link</button>
+    </div>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">📄</div>
+  <div class="floating-menu" id="floatingMenu">
+    <ul>
+      <li><a href="dashboard.html">Homepage</a></li>
+      <li><a href="referees.html">Referees</a></li>
+      <li><a href="youtube.html">YouTube Videos</a></li>
+      <li><a href="tiktok.html">TikTok Videos</a></li>
+      <li><a href="withdraw.html">Withdraw</a></li>
+      <li><a href="utubechannel.html">Trivia Questions and Utube Subscriptions</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+  
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

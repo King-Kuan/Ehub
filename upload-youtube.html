@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Manage YouTube Videos</title>
+  <link rel="stylesheet" href="admin-upload.css" />
+</head>
+<body>
+
+  <h2>Admin - Manage YouTube Videos</h2>
+
+  <section id="videosContainer" class="videos-grid"></section>
+
+  <button id="toggleFormBtn" title="Add Video">+</button>
+
+  <form id="uploadForm" autocomplete="off">
+    <h3>Add New Video</h3>
+
+    <div class="form-group">
+      <label for="youtubeUrl">YouTube Video URL</label>
+      <input 
+        type="url" 
+        id="youtubeUrl" 
+        name="youtubeUrl" 
+        placeholder="e.g. https://www.youtube.com/watch?v=..." 
+        required />
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount to Credit (Rwf)</label>
+      <input 
+        type="number" 
+        id="amount" 
+        name="amount" 
+        min="15" 
+        step="5" 
+        required />
+    </div>
+
+    <div class="form-group">
+      <label for="watchTime">Watch Time (minutes)</label>
+      <input 
+        type="number" 
+        id="watchTime" 
+        name="watchTime" 
+        min="0.3" 
+        step="0.1" 
+        required />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Video Description</label>
+      <textarea 
+        id="description" 
+        name="description" 
+        rows="3" 
+        placeholder="Brief description..." 
+        required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Upload Video</button>
+    <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+
+    <div id="message"></div>
+  </form>
+
+  <script type="module" src="admin-upload.js"></script>
+
+</body>
+</html>
